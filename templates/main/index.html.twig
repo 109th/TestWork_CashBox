@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block content %}
+        <div id="div_customer_chart"></div>
+        <div id="div_queue_chart"></div>
+        <div id="div_time_chart"></div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            {{ gc_draw(customerChart, 'div_customer_chart') }}
+            {{ gc_draw(queueChart, 'div_queue_chart') }}
+            {{ gc_draw(cashBoxTimeChart, 'div_time_chart') }}
+        </script>
+    {% endblock %}
+{% endblock %}
